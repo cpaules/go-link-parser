@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gophercises/link"
+	"github.com/cpaules/go-link-parser"
 )
 
-var exampleHtml = `
+var exampleHTML = `
 <html>
 <body>
   <h1>Hello!</h1>
@@ -21,7 +21,7 @@ var exampleHtml = `
 `
 
 func main() {
-	r := strings.NewReader(exampleHtml)
+	r := strings.NewReader(exampleHTML)
 	links, err := link.Parse(r)
 	if err != nil {
 		panic(err)
